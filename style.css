@@ -1,0 +1,73 @@
+/* title */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+/* body */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Serif+Pro:ital,wght@1,200&display=swap');
+
+
+:root{
+    --font-title:"Source Serif Pro, serif";
+    --font-body: "Roboto', sans-serif ";
+
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-image:linear-gradient(120deg, #A9F1DF , #FFBBBB) ;
+     
+}
+
+
+main{
+    width: 90vw;
+    height: 30vh;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    /* border:2px solid #FFBBBB; */
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* title */
+
+#title{
+    background-color:#bae9dd;
+    color: grey;
+    font-family: var(--font-title);
+    border: none;
+    height: 20px;
+    text-align: left;
+
+}
+
+#title:focus{
+    outline: none;
+}
+
+#note{
+    background-color:#bae9dd;
+    color: grey;
+    font-family: var(--font-title);
+    width:auto;
+    height: 85px;
+    border: none;
+
+}
+
+#note:focus{
+    outline: none;
+    text-orientation: upright;
+}
+
+.add-btn{
+
+
+
+}
