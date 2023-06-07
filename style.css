@@ -20,20 +20,23 @@ body{
 }
 
 
-main{
-    width: 90vw;
-    height: 30vh;
-    position: relative;
+ main{
+    width: 90%;
+    position: absolute;
+    height: 30%;
     top: 10px;
     left: 20px;
-    /* border:2px solid #FFBBBB; */
-    border-radius: 10px;
+    outline:1px solid #852020;
+    border-radius: 5px;
 }
 
 .container{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
+
+
 
 /* title */
 
@@ -42,10 +45,14 @@ main{
     color: grey;
     font-family: var(--font-title);
     border: none;
-    height: 20px;
+    width: auto;
+    height: 30%;
     text-align: left;
+    border-radius: 5px;
+    border-bottom-right-radius: 0px;
 
 }
+
 
 #title:focus{
     outline: none;
@@ -56,18 +63,81 @@ main{
     color: grey;
     font-family: var(--font-title);
     width:auto;
-    height: 85px;
+    height:70%;
     border: none;
-
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+   
 }
 
 #note:focus{
     outline: none;
-    text-orientation: upright;
 }
 
-.add-btn{
 
 
+#add-btn{
+    position: relative;
+    top: 95px;
+    left: 85%;
+    border:none ;
+    color: rgb(172, 44, 44);
+    background-color: #FFBBBB;
+    outline:1px solid #8d6262;
+    border-radius:2px ;
+    cursor: pointer ;
+
+}
+
+#add-btn:hover{
+    background-color:  rgb(223, 216, 216);
+    color: #FFBBBB;
+    transition: ease-in-out 0.5s;
+}
+
+/* Body  */
+
+section{
+    display:flex;
+    position: relative;
+    top: 110px;
+    left:4%;
+    flex: auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.body-container{
+    width: 200px;
+    height: 100px;
+    outline: 1px solid red;
+    flex: 1 1 100px;
+    padding:10px ;
+    margin: 10px;
+    border-radius:2px ;
+    
+}
+
+.title{
+    position: relative;
+    top: -20px;
+    color: #852020;
+    text-align: center;
+}
+
+.body{
+    position: relative;
+    top: -40px;
+    font-size: small;
+    text-align: center;
+
+}
+
+.delete-btn{
+    position: relative;
+    top: -50px;
+    left: 10px;
+    margin: 10px;
+    border-radius:2px ;
 
 }
