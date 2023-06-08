@@ -7,7 +7,7 @@
 
 :root{
     --font-title:"Source Serif Pro, serif";
-    --font-body: "Roboto', sans-serif ";
+    --font-body: "sans-serif ";
 
 }
 
@@ -15,15 +15,17 @@ body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-image:linear-gradient(120deg, #A9F1DF , #FFBBBB) ;
+    /* background-image:linear-gradient(90deg, #A9F1DF , #FFBBBB) ; */
+    background-color: #bae9dd;
+    font-family: var(--font-body);
      
 }
 
 
- main{
+ .main{
     width: 90%;
     position: absolute;
-    height: 30%;
+    height:100px;
     top: 10px;
     left: 20px;
     outline:1px solid #852020;
@@ -58,6 +60,8 @@ body{
     outline: none;
 }
 
+/* note */
+
 #note{
     background-color:#bae9dd;
     color: grey;
@@ -78,7 +82,7 @@ body{
 
 #add-btn{
     position: relative;
-    top: 95px;
+    top: 80px;
     left: 85%;
     border:none ;
     color: rgb(172, 44, 44);
@@ -97,24 +101,25 @@ body{
 
 /* Body  */
 
-section{
-    display:flex;
+.section{
     position: relative;
-    top: 110px;
-    left:4%;
+    display:flex;
+    top:120px ;
+    left:2%;
     flex: auto;
-    width: 90%;
+    width:90%;
+    height: auto;
     flex-wrap: wrap;
 }
 
 .body-container{
-    width: 200px;
-    height: 100px;
+    width: 30%;
+    height: fit-content;
     outline: 1px solid red;
     flex: 1 1 100px;
     padding:10px ;
     margin: 10px;
-    border-radius:2px ;
+    border-radius:10px ;
     
 }
 
@@ -122,22 +127,42 @@ section{
     position: relative;
     top: -20px;
     color: #852020;
-    text-align: center;
+    text-align: left;
 }
 
 .body{
     position: relative;
+    width: 90%;
+    height:80%;
     top: -40px;
     font-size: small;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+
+.btn{
+    position: relative;
+    width:40%;
+    margin: 10px;
+    border-radius:2px;
+
+}
+
+ .open-btn{
+    width: 100%;
+    border:1.2px solid #c02a2a;
+    position: relative;
+    top: -21px;
 
 }
 
 .delete-btn{
-    position: relative;
-    top: -50px;
-    left: 10px;
-    margin: 10px;
-    border-radius:2px ;
-
+      position: relative;
+      left: 130%;
+      top: -50px;
+      width: 100%;
+      border:1.2px solid #c02a2a;
+ 
 }
