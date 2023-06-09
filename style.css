@@ -99,10 +99,10 @@ body{
 
 }
 
-#add-btn:hover{
+#add-btn:active{
     background-color:  rgb(223, 216, 216);
     color: #FFBBBB;
-    transition: ease-in-out 0.5s;
+    transition: linear 0.2s;
 }
 
 /* Body  */
