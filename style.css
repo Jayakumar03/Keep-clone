@@ -4,7 +4,16 @@
 /* body */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Serif+Pro:ital,wght@1,200&display=swap');
 
+/* ideas to implement
+1. Adding slowly appearing animation
+2. while loading rendering animation
 
+
+
+
+
+
+*/
 :root{
     --font-title:"Source Serif Pro, serif";
     --font-body: "sans-serif ";

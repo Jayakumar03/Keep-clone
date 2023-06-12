@@ -1,12 +1,15 @@
 let id = 0;
 let tempArray
 let storageArray = []
+let deletedArray = []
 let index = 0;
 
 const title = document.getElementById("title")
 const note = document.getElementById("note")
 const addButton = document.getElementById("add-btn")
-let taskSection = document.getElementsByClassName("section")
+const taskSection = document.getElementsByClassName("section")
+
+
 
 
 
@@ -44,7 +47,7 @@ function storage(taskTitle = "empty", taskBody = "Please enter an task", e){
     tempArray = [id,taskTitle,taskBody]
     storageArray = [...storageArray, tempArray]
     id++
-    console.table(storageArray)
+    // console.table(storageArray)
 
 }
 
@@ -52,8 +55,37 @@ function storage(taskTitle = "empty", taskBody = "Please enter an task", e){
 function generatingTasks() {
      
 // use beforeUnload option to listen to tab close or window close . At that time mark task index = 0
+ /*
+
+  <!-- <div class="body-container">
+
+                <div >
+                    <h6 class="title">
+                        Title
+                    </h6>
+                </div>
+
+                <div >
+                    <p class="body">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                </div>
+
+                <div  class="btn " >
+                    <button class="open-btn">Open</button>
+                </div>
+
+                <div class="btn">
+                    <button class="delete-btn" >Delete</button>
+                </div>
+            </div> -->
 
 
+
+
+*/
         let newBody = document.createElement("div")
         newBody.classList.add("body-container")
 
@@ -101,5 +133,33 @@ function generatingTasks() {
         taskSection[0].appendChild(newBody)
 
         index++
+
+        // Attaching event handler to delete btn
+        const deleteButton = document.getElementsByClassName("delete-btn")
+
+       for (let index = 0; index < deleteButton.length; index++) {
+        deleteButton[index].addEventListener("click", deleteTask)
         
+       }
     };
+
+
+    function deleteTask(e) {
+     let deleteIndex = e.target.id
+     deletedArray =[...deletedArray, storageArray.splice(deleteIndex,1)]
+
+
+
+        
+    }
+
+
+
+
+
+    /*
+    1. archieve notes
+    2. sorting notes => displat shortest to longest
+    
+    
+    */
