@@ -188,3 +188,7 @@ body{
       background-color: var(--btn-primary);
  
 }
+
+.delete-task{
+    display:none
+}

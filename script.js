@@ -10,14 +10,9 @@ const addButton = document.getElementById("add-btn")
 const taskSection = document.getElementsByClassName("section")
 
 
-
-
-
-
-// Event Listener
+/* Event Listener */
 
 addButton.addEventListener("click", addTask)
-
 
 
 /* function */
@@ -36,19 +31,29 @@ function addTask(e){
 
     }
    
-   
 }
 
 
 
 function storage(taskTitle = "empty", taskBody = "Please enter an task", e){
     e.preventDefault()
-
     tempArray = [id,taskTitle,taskBody]
     storageArray = [...storageArray, tempArray]
     id++
-    // console.table(storageArray)
 
+     /*   set local storage */
+
+     brwStorage(storageArray)
+
+
+
+}
+
+
+function brwStorage(array) {
+
+    localStorage.setItem("array", JSON.stringify(array))
+    
 }
 
 
@@ -65,7 +70,7 @@ function generatingTasks() {
                     </h6>
                 </div>
 
-                <div >
+                <difv >
                     <p class="body">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -134,6 +139,7 @@ function generatingTasks() {
 
         index++
 
+
         // Attaching event handler to delete btn
         const deleteButton = document.getElementsByClassName("delete-btn")
 
@@ -141,25 +147,31 @@ function generatingTasks() {
         deleteButton[index].addEventListener("click", deleteTask)
         
        }
+
+   
+
     };
 
 
     function deleteTask(e) {
-     let deleteIndex = e.target.id
-     deletedArray =[...deletedArray, storageArray.splice(deleteIndex,1)]
+        let deleteIndex = e.target.id;
+        deletedArray = [...deletedArray, storageArray.splice(deleteIndex, 1)];
+        index--
+
+        deleteLocalStorage(deleteIndex )
+      
+        let parentElement = e.target.parentElement;
+        let grandparentElement = parentElement.parentNode;
+        // Access the grandparent element and perform operations
+      
+        // Example: Remove the parent element from the DOM
+        grandparentElement.className = "delete-task"
+      }
 
 
+      function deleteLocalStorage(deleteIndex) {
 
+        let array = localStorage.getItem("array")
+        console.log(array)
         
-    }
-
-
-
-
-
-    /*
-    1. archieve notes
-    2. sorting notes => displat shortest to longest
-    
-    
-    */
+      }
